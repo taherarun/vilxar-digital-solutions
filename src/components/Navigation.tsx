@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Mail, Sparkles } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,17 +20,16 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md shadow-xl fixed w-full top-0 z-50 border-b border-gray-200/50">
+    <nav className="bg-white/95 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Sparkles className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Vilxar
-              </span>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/497b18ea-e4a7-4718-95f7-b263dccfe1ba.png" 
+                alt="Vilxar Digital" 
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
@@ -42,8 +41,8 @@ const Navigation = () => {
                 to={item.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   location.pathname === item.path
-                    ? 'text-indigo-600 bg-indigo-50 border border-indigo-200'
-                    : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50'
+                    ? 'text-slate-800 bg-slate-100 border border-slate-200'
+                    : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
                 }`}
               >
                 {item.name}
@@ -51,7 +50,7 @@ const Navigation = () => {
             ))}
             <button
               onClick={handleEmailClick}
-              className="flex items-center space-x-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg font-medium"
+              className="flex items-center space-x-2 bg-slate-800 text-white px-6 py-2 rounded-lg hover:bg-slate-700 transition-all duration-300 shadow-sm font-medium"
             >
               <Mail className="h-4 w-4" />
               <span>Get Quote</span>
@@ -62,7 +61,7 @@ const Navigation = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              className="text-slate-600 hover:text-slate-800 p-2 rounded-lg hover:bg-slate-100 transition-colors duration-300"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -72,7 +71,7 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100">
           <div className="px-4 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <Link
@@ -80,8 +79,8 @@ const Navigation = () => {
                 to={item.path}
                 className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
                   location.pathname === item.path
-                    ? 'text-indigo-600 bg-indigo-50 border border-indigo-200'
-                    : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50'
+                    ? 'text-slate-800 bg-slate-100 border border-slate-200'
+                    : 'text-slate-600 hover:text-slate-800 hover:bg-slate-50'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -90,7 +89,7 @@ const Navigation = () => {
             ))}
             <button
               onClick={handleEmailClick}
-              className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 font-medium mt-4"
+              className="w-full flex items-center justify-center space-x-2 bg-slate-800 text-white px-6 py-3 rounded-lg hover:bg-slate-700 transition-all duration-300 font-medium mt-4"
             >
               <Mail className="h-4 w-4" />
               <span>Get Quote</span>
