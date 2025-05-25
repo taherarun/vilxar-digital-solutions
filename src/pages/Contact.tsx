@@ -15,6 +15,12 @@ const Contact = () => {
     window.location.href = 'mailto:info@vilxar.com?subject=Free Consultation Request&body=Hi, I would like to schedule a free consultation to discuss my digital marketing needs.%0D%0A%0D%0APreferred contact method:%0D%0APreferred time:%0D%0ABrief description of my business:%0D%0A%0D%0AThank you!';
   };
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "1234567890"; // Replace with actual WhatsApp number
+    const message = "Hi, I would like to know more about your digital marketing services.";
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -53,24 +59,24 @@ const Contact = () => {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="h-8 w-8 text-purple-600" />
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Phone className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Call Us</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">WhatsApp</h3>
               <p className="text-gray-600 mb-6">
-                Speak directly with our team for immediate assistance.
+                Send us a message on WhatsApp for quick communication.
               </p>
-              <a
-                href="tel:+1-555-VILXAR"
-                className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 inline-block"
+              <button
+                onClick={handleWhatsAppClick}
+                className="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-3 rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105"
               >
-                +1 (555) VILXAR
-              </a>
+                Message on WhatsApp
+              </button>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <MapPin className="h-8 w-8 text-green-600" />
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MapPin className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Visit Us</h3>
               <p className="text-gray-600 mb-6">
@@ -152,7 +158,7 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Support Hours</h3>
                 <div className="space-y-2 text-gray-600">
                   <p>Email Support: 24/7</p>
-                  <p>Phone Support: Business Hours</p>
+                  <p>WhatsApp Support: Business Hours</p>
                   <p>Emergency: On-call available</p>
                 </div>
               </div>
