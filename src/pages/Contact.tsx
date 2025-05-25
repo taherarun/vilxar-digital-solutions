@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
@@ -16,7 +15,7 @@ const Contact = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "8870504613"; // Replace with actual WhatsApp number
+    const phoneNumber = "918870504613"; // Added country code 91 for India
     const message = "Hi, I would like to know more about your digital marketing services.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
