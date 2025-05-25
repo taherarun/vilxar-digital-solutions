@@ -2,16 +2,66 @@ import React from 'react';
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
   const handleEmailClick = (subject = "General Inquiry") => {
-    window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=Hi, I would like to get in touch with your team.`;
+    if (isMobile()) {
+      window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=Hi, I would like to get in touch with your team.`;
+    } else {
+      // For desktop, show options to open Gmail or Outlook
+      const confirmed = window.confirm("Choose your email service:\nOK for Gmail\nCancel for Outlook");
+      const emailBody = "Hi, I would like to get in touch with your team.";
+      
+      if (confirmed) {
+        // Open Gmail
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        window.open(gmailUrl, '_blank');
+      } else {
+        // Open Outlook
+        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        window.open(outlookUrl, '_blank');
+      }
+    }
   };
 
   const handleQuoteClick = () => {
-    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Request for Quote&body=Hi, I would like to request a quote for your digital marketing services. Please provide details for:%0D%0A%0D%0A- Business Type:%0D%0A- Current Marketing Challenges:%0D%0A- Goals:%0D%0A- Budget Range:%0D%0A- Timeline:%0D%0A%0D%0AThank you!';
+    const subject = "Request for Quote";
+    const body = "Hi, I would like to request a quote for your digital marketing services. Please provide details for:\n\n- Business Type:\n- Current Marketing Challenges:\n- Goals:\n- Budget Range:\n- Timeline:\n\nThank you!";
+    
+    if (isMobile()) {
+      window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    } else {
+      const confirmed = window.confirm("Choose your email service:\nOK for Gmail\nCancel for Outlook");
+      
+      if (confirmed) {
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(gmailUrl, '_blank');
+      } else {
+        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(outlookUrl, '_blank');
+      }
+    }
   };
 
   const handleConsultationClick = () => {
-    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Free Consultation Request&body=Hi, I would like to schedule a free consultation to discuss my digital marketing needs.%0D%0A%0D%0APreferred contact method:%0D%0APreferred time:%0D%0ABrief description of my business:%0D%0A%0D%0AThank you!';
+    const subject = "Free Consultation Request";
+    const body = "Hi, I would like to schedule a free consultation to discuss my digital marketing needs.\n\nPreferred contact method:\nPreferred time:\nBrief description of my business:\n\nThank you!";
+    
+    if (isMobile()) {
+      window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+    } else {
+      const confirmed = window.confirm("Choose your email service:\nOK for Gmail\nCancel for Outlook");
+      
+      if (confirmed) {
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(gmailUrl, '_blank');
+      } else {
+        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(outlookUrl, '_blank');
+      }
+    }
   };
 
   const handleWhatsAppClick = () => {
