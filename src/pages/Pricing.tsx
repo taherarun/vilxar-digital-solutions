@@ -4,7 +4,7 @@ import { Check, Star, Mail } from 'lucide-react';
 
 const Pricing = () => {
   const handleEmailClick = (plan: string) => {
-    window.location.href = `mailto:info@vilxar.com?subject=Interested in ${plan} Plan&body=Hi, I am interested in the ${plan} plan. Please provide more details and next steps.`;
+    window.location.href = `mailto:vilxardigital@gmail.com?subject=Interested in ${plan} Plan&body=Hi, I am interested in the ${plan} plan. Please provide more details and next steps.`;
   };
 
   const plans = [

@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleEmailClick = (subject = "General Inquiry") => {
     if (isMobile()) {
-      window.location.href = `mailto:info@vilxar.com?subject=${subject}&body=Hi, I would like to get in touch with your team.`;
+      window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=Hi, I would like to get in touch with your team.`;
     } else {
       // For desktop, show options to open Gmail or Outlook
       const confirmed = window.confirm("Choose your email service:\nOK for Gmail\nCancel for Outlook");
@@ -16,11 +16,11 @@ const Contact = () => {
       
       if (confirmed) {
         // Open Gmail
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@vilxar.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
         window.open(gmailUrl, '_blank');
       } else {
         // Open Outlook
-        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=info@vilxar.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
         window.open(outlookUrl, '_blank');
       }
     }
@@ -31,15 +31,15 @@ const Contact = () => {
     const body = "Hi, I would like to request a quote for your digital marketing services. Please provide details for:\n\n- Business Type:\n- Current Marketing Challenges:\n- Goals:\n- Budget Range:\n- Timeline:\n\nThank you!";
     
     if (isMobile()) {
-      window.location.href = `mailto:info@vilxar.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
     } else {
       const confirmed = window.confirm("Choose your email service:\nOK for Gmail\nCancel for Outlook");
       
       if (confirmed) {
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@vilxar.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.open(gmailUrl, '_blank');
       } else {
-        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=info@vilxar.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.open(outlookUrl, '_blank');
       }
     }
@@ -50,22 +50,22 @@ const Contact = () => {
     const body = "Hi, I would like to schedule a free consultation to discuss my digital marketing needs.\n\nPreferred contact method:\nPreferred time:\nBrief description of my business:\n\nThank you!";
     
     if (isMobile()) {
-      window.location.href = `mailto:info@vilxar.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
     } else {
       const confirmed = window.confirm("Choose your email service:\nOK for Gmail\nCancel for Outlook");
       
       if (confirmed) {
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@vilxar.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.open(gmailUrl, '_blank');
       } else {
-        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=info@vilxar.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=vilxardigital@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.open(outlookUrl, '_blank');
       }
     }
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "8870504613"; // Replace with actual WhatsApp number
+    const phoneNumber = "918870504613"; // Added country code 91 for India
     const message = "Hi, I would like to know more about your digital marketing services.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };

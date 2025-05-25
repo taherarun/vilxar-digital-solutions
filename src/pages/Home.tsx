@@ -5,11 +5,11 @@ import { ArrowRight, TrendingUp, Target, BarChart3, Users, Mail, CheckCircle, St
 
 const Home = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@vilxar.com?subject=Digital Solutions Inquiry&body=Hi, I would like to know more about your digital solutions services.';
+    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Digital Solutions Inquiry&body=Hi, I would like to know more about your digital solutions services.';
   };
 
   const handleGetStartedClick = () => {
-    window.location.href = 'mailto:info@vilxar.com?subject=Get Started with Vilxar&body=Hi, I am interested in getting started with your digital solutions. Please contact me to discuss my requirements.';
+    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Get Started with Vilxar&body=Hi, I am interested in getting started with your digital solutions. Please contact me to discuss my requirements.';
   };
 
   const testimonials = [
