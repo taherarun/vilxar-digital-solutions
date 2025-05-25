@@ -54,7 +54,7 @@ const About = () => {
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
                   <div className="text-gray-600">Happy Clients</div>
                 </div>
                 <div className="text-center">
@@ -62,14 +62,40 @@ const About = () => {
                   <div className="text-gray-600">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">5+</div>
-                  <div className="text-gray-600">Years Experience</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
                   <div className="text-gray-600">Support</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Mission
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                To bridge the gap between traditional retail
+                and the digital marketplace. Whether you're
+                just starting out or have been running your
+                store for years, Vilxar is here to guide you
+                step-by-step into the future of retail.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Vision
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                To become the go-to digital growth partner
+                for every local business retailer in India,
+                helping them thrive in the digital economy
+                with confidence, creativity, and measurable
+                impact.
+              </p>
             </div>
           </div>
         </div>

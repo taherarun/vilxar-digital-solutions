@@ -10,16 +10,23 @@ const Pricing = () => {
   const plans = [
     {
       name: "Starter",
-      price: "$999",
-      period: "/month",
       description: "Perfect for small businesses starting their digital journey",
+      // features: [
+      //   "Google Ads management",
+      //   "Basic analytics & reporting",
+      //   "Monthly strategy review",
+      //   "Email support",
+      //   "Up to 2 campaigns",
+      //   "Landing page optimization"
+      // ],
       features: [
-        "Google Ads management",
-        "Basic analytics & reporting",
-        "Monthly strategy review",
-        "Email support",
-        "Up to 2 campaigns",
-        "Landing page optimization"
+        "Business Profile Setup",
+        "NAP Consistency Check",
+        "Branding & Visual Uploads",
+        "SEO-Optimized Business Description",
+        "Dedicated Email Support",
+        "Google Maps Integration",
+        "Social Media Profile Optimization",
       ],
       cta: "Start Growing",
       popular: false,
@@ -27,42 +34,61 @@ const Pricing = () => {
     },
     {
       name: "Growth",
-      price: "$1,999",
-      period: "/month",
       description: "Ideal for growing businesses ready to scale their marketing",
+      // features: [
+      //   "Google Ads + Meta Ads management",
+      //   "Advanced analytics & reporting",
+      //   "Bi-weekly strategy sessions",
+      //   "Priority support",
+      //   "Up to 5 campaigns",
+      //   "Conversion rate optimization",
+      //   "SEO optimization",
+      //   "Custom audience targeting"
+      // ],
       features: [
-        "Google Ads + Meta Ads management",
-        "Advanced analytics & reporting",
-        "Bi-weekly strategy sessions",
-        "Priority support",
-        "Up to 5 campaigns",
-        "Conversion rate optimization",
-        "SEO optimization",
-        "Custom audience targeting"
+        "Starter pack",
+        "Custom 5-Page Website Design",
+        "Mobile & Tablet Optimization",
+        "Integrated Social Media & Maps",
+        "Basic Speed Optimization",
+        "Professional & Clean Logo Design",
+        "Basic On-Page SEO",
+        "Optimized Email Support",
+        "24/7 Support"
       ],
       cta: "Accelerate Growth",
-      popular: true,
+      popular: false,
       color: "from-purple-500 to-purple-600"
     },
     {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "For established businesses seeking maximum growth potential",
+      name: "Pro",
+      description: "For businesses ready to scale and maximize their online growth potential",
+      // features: [
+      //   "Full-service digital marketing",
+      //   "Custom analytics dashboard",
+      //   "Weekly strategy sessions",
+      //   "Dedicated account manager",
+      //   "Unlimited campaigns",
+      //   "Advanced automation",
+      //   "A/B testing & optimization",
+      //   "Custom integrations",
+      //   "Growth forecasting",
+      //   "24/7 priority support"
+      // ],
       features: [
-        "Full-service digital marketing",
-        "Custom analytics dashboard",
-        "Weekly strategy sessions",
-        "Dedicated account manager",
-        "Unlimited campaigns",
-        "Advanced automation",
-        "A/B testing & optimization",
-        "Custom integrations",
-        "Growth forecasting",
-        "24/7 priority support"
+        "Growth Pack",
+        "Custom 10-Page E-Commerce Website Design",
+        "Product Catalog Integration",
+        "Secure Checkout Setup",
+        "Google Ads + Meta Ads Management",
+        "Campaign Strategy Guidance",
+        "Advanced Analytics & Performance Reports",
+        "Landing Page Optimization",
+        "Growth Forecasting",
+        "24/7 Priority Support",
       ],
       cta: "Maximize Results",
-      popular: false,
+      popular: true,
       color: "from-green-500 to-green-600"
     }
   ];
@@ -77,8 +103,8 @@ const Pricing = () => {
               Choose Your Growth Plan
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Transparent pricing for every stage of your business. No hidden fees, 
-              no long-term contracts. Just results-driven digital marketing.
+              Built for impact at every stage of your business — flexible, commitment-free, 
+              and focused on measurable growth. Just results-driven digital marketing.
             </p>
           </div>
         </div>
@@ -108,10 +134,6 @@ const Pricing = () => {
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <p className="text-gray-600 mb-4">{plan.description}</p>
-                    <div className="flex items-center justify-center">
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                      <span className="text-gray-600 ml-2">{plan.period}</span>
-                    </div>
                   </div>
                   
                   <ul className="space-y-4 mb-8">

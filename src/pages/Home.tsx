@@ -14,30 +14,22 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
+      company: "Clutzen Fashion",
       text: "Vilxar transformed our online presence. Our leads increased by 300% in just 3 months!",
       rating: 5
     },
     {
-      name: "Michael Chen",
       company: "GrowthCorp",
       text: "Professional, results-driven, and always exceeding expectations. Highly recommended!",
       rating: 5
     },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Ventures",
-      text: "The ROI from their campaigns has been exceptional. Best investment we've made.",
-      rating: 5
-    }
   ];
 
   const stats = [
-    { number: "500+", label: "Happy Clients" },
-    { number: "2M+", label: "Leads Generated" },
+    { number: "5+", label: "Happy Clients" },
     { number: "98%", label: "Client Satisfaction" },
-    { number: "5x", label: "Average ROI" }
+    { number: "5x", label: "Average ROI" },
+    { number: "24/7", label: "Support Availability"}
   ];
 
   return (
@@ -51,10 +43,10 @@ const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
-            <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-8 border border-white/20 shadow-lg">
+            {/* <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md rounded-full text-white text-sm font-medium mb-8 border border-white/20 shadow-lg">
               <Zap className="h-4 w-4 mr-2 text-amber-400" />
-              Trusted by 500+ Growing Businesses
-            </div>
+              Trusted by 5+ Growing Businesses
+            </div> */}
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Transform Your Business with
@@ -208,7 +200,7 @@ const Home = () => {
               
               <div className="space-y-8">
                 {[
-                  "Proven track record with 500+ successful campaigns",
+                  "Proven track record with successful campaigns",
                   "Advanced AI-powered optimization techniques",
                   "24/7 monitoring and real-time adjustments",
                   "Transparent reporting with detailed analytics",
@@ -261,8 +253,7 @@ const Home = () => {
                 </div>
                 <p className="text-gray-700 mb-8 italic text-lg leading-relaxed">"{testimonial.text}"</p>
                 <div>
-                  <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
-                  <div className="text-gray-600">{testimonial.company}</div>
+                  <div className="font-bold text-gray-900 text-lg">{testimonial.company}</div>
                 </div>
               </div>
             ))}
