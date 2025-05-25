@@ -4,7 +4,7 @@ import { Users, Award, TrendingUp, Mail } from 'lucide-react';
 
 const About = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@vilxar.com?subject=Learn More About Vilxar&body=Hi, I would like to learn more about your company and services.';
+    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Learn More About Vilxar&body=Hi, I would like to learn more about your company and services.';
   };
 
   return (

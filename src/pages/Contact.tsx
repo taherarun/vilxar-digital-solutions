@@ -3,15 +3,15 @@ import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const handleEmailClick = (subject = "General Inquiry") => {
-    window.location.href = `mailto:info@vilxar.com?subject=${subject}&body=Hi, I would like to get in touch with your team.`;
+    window.location.href = `mailto:vilxardigital@gmail.com?subject=${subject}&body=Hi, I would like to get in touch with your team.`;
   };
 
   const handleQuoteClick = () => {
-    window.location.href = 'mailto:info@vilxar.com?subject=Request for Quote&body=Hi, I would like to request a quote for your digital marketing services. Please provide details for:%0D%0A%0D%0A- Business Type:%0D%0A- Current Marketing Challenges:%0D%0A- Goals:%0D%0A- Budget Range:%0D%0A- Timeline:%0D%0A%0D%0AThank you!';
+    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Request for Quote&body=Hi, I would like to request a quote for your digital marketing services. Please provide details for:%0D%0A%0D%0A- Business Type:%0D%0A- Current Marketing Challenges:%0D%0A- Goals:%0D%0A- Budget Range:%0D%0A- Timeline:%0D%0A%0D%0AThank you!';
   };
 
   const handleConsultationClick = () => {
-    window.location.href = 'mailto:info@vilxar.com?subject=Free Consultation Request&body=Hi, I would like to schedule a free consultation to discuss my digital marketing needs.%0D%0A%0D%0APreferred contact method:%0D%0APreferred time:%0D%0ABrief description of my business:%0D%0A%0D%0AThank you!';
+    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Free Consultation Request&body=Hi, I would like to schedule a free consultation to discuss my digital marketing needs.%0D%0A%0D%0APreferred contact method:%0D%0APreferred time:%0D%0ABrief description of my business:%0D%0A%0D%0AThank you!';
   };
 
   const handleWhatsAppClick = () => {

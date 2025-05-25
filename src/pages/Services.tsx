@@ -4,7 +4,7 @@ import { Target, Users, BarChart3, TrendingUp, Search, Zap, Mail } from 'lucide-
 
 const Services = () => {
   const handleEmailClick = (service: string) => {
-    window.location.href = `mailto:info@vilxar.com?subject=Inquiry about ${service}&body=Hi, I am interested in your ${service} service. Please provide more details.`;
+    window.location.href = `mailto:vilxardigital@gmail.com?subject=Inquiry about ${service}&body=Hi, I am interested in your ${service} service. Please provide more details.`;
   };
 
   const services = [

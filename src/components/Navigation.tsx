@@ -16,7 +16,7 @@ const Navigation = () => {
   ];
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@vilxar.com?subject=Digital Solutions Inquiry&body=Hi, I would like to know more about your digital solutions services.';
+    window.location.href = 'mailto:vilxardigital@gmail.com?subject=Digital Solutions Inquiry&body=Hi, I would like to know more about your digital solutions services.';
   };
 
   return (
