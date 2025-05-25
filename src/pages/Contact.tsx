@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const handleEmailClick = (subject = "General Inquiry") => {
@@ -19,6 +19,10 @@ const Contact = () => {
     const phoneNumber = "1234567890"; // Replace with actual WhatsApp number
     const message = "Hi, I would like to know more about your digital marketing services.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+  };
+
+  const handlePhoneCall = () => {
+    window.location.href = 'tel:+1-555-VILXAR';
   };
 
   return (
@@ -41,7 +45,7 @@ const Contact = () => {
       {/* Contact Options */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Mail className="h-8 w-8 text-blue-600" />
@@ -59,8 +63,24 @@ const Contact = () => {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Phone className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Call Us</h3>
+              <p className="text-gray-600 mb-6">
+                Speak directly with our team for immediate assistance.
+              </p>
+              <button
+                onClick={handlePhoneCall}
+                className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105"
+              >
+                Call Now
+              </button>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="h-8 w-8 text-green-600" />
+                <MessageCircle className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">WhatsApp</h3>
               <p className="text-gray-600 mb-6">
@@ -74,9 +94,9 @@ const Contact = () => {
               </button>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <MapPin className="h-8 w-8 text-purple-600" />
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MapPin className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Visit Us</h3>
               <p className="text-gray-600 mb-6">
@@ -158,7 +178,7 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Support Hours</h3>
                 <div className="space-y-2 text-gray-600">
                   <p>Email Support: 24/7</p>
-                  <p>WhatsApp Support: Business Hours</p>
+                  <p>Phone & WhatsApp: Business Hours</p>
                   <p>Emergency: On-call available</p>
                 </div>
               </div>
