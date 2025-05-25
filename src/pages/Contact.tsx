@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "1234567890"; // Replace with actual WhatsApp number
+    const phoneNumber = "8870504613"; // Replace with actual WhatsApp number
     const message = "Hi, I would like to know more about your digital marketing services.";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
@@ -45,8 +45,8 @@ const Contact = () => {
       {/* Contact Options */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transit ion-shadow duration-300">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Mail className="h-8 w-8 text-blue-600" />
               </div>
@@ -58,11 +58,12 @@ const Contact = () => {
                 onClick={() => handleEmailClick()}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105"
               >
-                Send Email
+                Send Email<br/>
+                vilxardigital@gmail.com
               </button>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="h-8 w-8 text-purple-600" />
               </div>
@@ -76,7 +77,7 @@ const Contact = () => {
               >
                 Call Now
               </button>
-            </div>
+            </div> */}
 
             <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -94,7 +95,7 @@ const Contact = () => {
               </button>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+            {/* <div className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="h-8 w-8 text-orange-600" />
               </div>
@@ -107,7 +108,7 @@ const Contact = () => {
                 Suite 456<br />
                 Tech City, TC 12345
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Actions */}
@@ -168,8 +169,7 @@ const Contact = () => {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Office Hours</h3>
                 <div className="space-y-2 text-gray-600">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
+                  <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
                   <p>Sunday: Closed</p>
                 </div>
               </div>
